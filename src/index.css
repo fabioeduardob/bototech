@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: 'Outfit', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-navy-950: #060B16;
+  --color-navy-900: #0F172A;
+  --color-navy-800: #16213B;
+  --color-navy-700: #1E293B;
+  --color-boto-pink: #FF4D6D;
+  --color-boto-pink-hover: #FF3358;
+  --color-boto-cyan: #06B6D4;
+  --color-boto-cyan-hover: #22D3EE;
+}
+
+:root {
+  --mouse-x: 50%;
+  --mouse-y: 45%;
+  --spotlight-radius: 500px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #0F172A;
+  color: #F8FAFC;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Flashlight mask that reveals the underlying hero background where the cursor moves */
+.hero-flashlight-reveal {
+  mask-image: radial-gradient(
+    circle var(--spotlight-radius) at var(--mouse-x) var(--mouse-y),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.88) 38%,
+    rgba(0, 0, 0, 0.25) 72%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle var(--spotlight-radius) at var(--mouse-x) var(--mouse-y),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.88) 38%,
+    rgba(0, 0, 0, 0.25) 72%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.hero-flashlight-ring {
+  background: radial-gradient(
+    circle var(--spotlight-radius) at var(--mouse-x) var(--mouse-y),
+    rgba(6, 182, 212, 0.16) 0%,
+    rgba(255, 77, 109, 0.12) 45%,
+    transparent 75%
+  );
+}
+
+/* Smooth premium card hover transitions without layout geometry shifts */
+.boto-card {
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.boto-card:hover {
+  transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .boto-card {
+    transition: none;
+  }
+  .boto-card:hover {
+    transform: none;
+  }
+}

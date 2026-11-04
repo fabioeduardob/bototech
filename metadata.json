@@ -1,0 +1,6 @@
+{
+  "name": "Bototech — Portfólio de Engenharia & Desenvolvimento",
+  "description": "Portfólio oficial da Bototech (Fábio). Desenvolvimento Full-Stack, Simulações 3D Navais (Three.js, ARPA, IALA B), Apps Mobile Offline-First (Flutter/SQLite) e Automações Web de Alta Performance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
