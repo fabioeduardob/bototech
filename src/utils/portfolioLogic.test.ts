@@ -60,7 +60,7 @@ test('PROJECTS_DATA and STACK_ITEMS contain all required Bototech specifications
   assert.equal(PROJECTS_DATA.length, 3);
   assert.equal(PROJECTS_DATA[0].title, 'Simuladores 3D');
   assert.equal(PROJECTS_DATA[0].appUrl, 'https://simuladornavio.bototech.com.br/');
-  assert.equal(PROJECTS_DATA[1].title, 'Mobile');
+  assert.equal(PROJECTS_DATA[1].title, 'Calculadora de Coordenadas Geográficas');
   assert.equal(PROJECTS_DATA[1].appUrl, 'https://calgeo.bototech.com.br/');
   assert.equal(PROJECTS_DATA[2].title, 'Web & Automação');
   assert.equal(PROJECTS_DATA[2].appUrl, 'https://impressora.bototech.com.br/');

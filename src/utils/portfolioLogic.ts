@@ -181,7 +181,7 @@ export const PROJECTS_DATA: ProjectCardItem[] = [
     id: 'mobile-flutter',
     indexNumber: '02',
     category: 'Engenharia Mobile Offline-First',
-    title: 'Mobile',
+    title: 'Calculadora de Coordenadas Geográficas',
     subtitle: 'Flutter de Alta Performance & Persistência SQLite',
     description:
       'Aplicativos desenvolvidos em Flutter utilizando SQLite para alta performance offline e arquitetura limpa.',
